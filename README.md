@@ -1,1 +1,1 @@
-© 2025 Naomi Clay Rodríguez. All rights reserved
+© 2025 Naomi Clay Rodríguez. All rights reserved.
