@@ -31,12 +31,13 @@
 .logo-track {
   display: flex;
   white-space: nowrap;
-  animation: scroll 15s linear infinite;
+  /*animation: scroll 15s linear infinite;*/
+  gap: 4rem;
 }
 .logo-track img {
   height: 125px; /* or your preferred size */
-  margin: 0 2rem;
-  width: auto;
+  /*margin: 0 2rem;
+  width: auto;*/
   object-fit: contain;
   opacity: 0.5;
   transition: opacity 0.3s;

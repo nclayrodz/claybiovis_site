@@ -151,7 +151,7 @@
             <img src="images/carousel/vs.png" alt="Vesalius Trust">
             <img src="images/carousel/Gov.png" alt="Fisheries and Oceans Canada">
             <img src="images/carousel/imgenium.png" alt="Imgenium">
-            <!-- Repeat logos if you want it to scroll smoothly -->
+            <!-- Repeat logos if you want it to scroll smoothly 
             <img src="images/carousel/uhn.png" alt="UHN">
             <img src="images/carousel/temerty.png" alt="Temerty Medicine">
             <img src="images/carousel/tvasurg.png" alt="TVASurg">
@@ -159,7 +159,7 @@
             <img src="images/carousel/vs.png" alt="Vesalius Trust">
             <img src="images/carousel/Gov.png" alt="Fisheries and Oceans Canada">
             <img src="images/carousel/imgenium.png" alt="Imgenium">
-            <!-- Repeat logos if you want it to scroll smoothly >
+            < Repeat logos if you want it to scroll smoothly >
             <img src="images/carousel/uhn.png" alt="UHN">
             <img src="images/carousel/temerty.png" alt="Temerty Medicine">
             <img src="images/carousel/tvasurg.png" alt="TVASurg">
@@ -404,6 +404,29 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        const track = document.getElementById('logoTrack');
+        const clone = track.cloneNode(true);
+        track.parentNode.appendChild(clone);
+      
+        let scrollAmount = 0;
+      
+        function animate() {
+          scrollAmount += 1; // smaller = slower scroll
+          if (scrollAmount >= track.offsetWidth) {
+            scrollAmount = 0;
+          }
+      
+          track.style.transform = `translateX(-${scrollAmount}px)`;
+          clone.style.transform = `translateX(-${scrollAmount}px)`;
+      
+          requestAnimationFrame(animate);
+        }
+      
+        animate();
+      </script>
+      
+      
 
 </body>
 </html>
