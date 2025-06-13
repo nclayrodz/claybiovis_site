@@ -56,13 +56,13 @@
   }
   /* Mobile adjustments */
   @media (max-width: 768px) {
-    .collaborators-wrapper {
-      padding: 1rem 1.5rem;
-      gap: 1rem;
+    .logo-track img {
+      height: 70px;       /* scale down logo height */
+      margin: 0 1rem;      /* reduce spacing between logos */
     }
   
-    .collaborators-wrapper img {
-      max-width: 80px; /* or a percentage, like 20% */
-      height: auto;
+    .logo-carousel::before,
+    .logo-carousel::after {
+      width: 40px;         /* narrower fading edges on mobile */
     }
   }
