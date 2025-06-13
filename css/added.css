@@ -59,7 +59,7 @@ background: linear-gradient(to left, white 0%, transparent 100%);
   font-size: 1.2em; /* or whatever looks best */
 } 
  
-.collab-heading {
+h6.collab-heading {
   font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
@@ -71,7 +71,7 @@ background: linear-gradient(to left, white 0%, transparent 100%);
 }
 
 @media (max-width: 768px) {
-  .collab-heading {
+  h6.collab-heading {
     font-size: 1rem;
     padding: 0 1.5rem; /* more generous on small screens */
     max-width: 100%;
