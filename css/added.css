@@ -54,3 +54,15 @@
       transform: translateX(-50%);
     }
   }
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .collaborators-wrapper {
+      padding: 1rem 1.5rem;
+      gap: 1rem;
+    }
+  
+    .collaborators-wrapper img {
+      max-width: 80px; /* or a percentage, like 20% */
+      height: auto;
+    }
+  }
