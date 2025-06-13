@@ -1,13 +1,79 @@
  /*Working wrapper*/
  .logo-carousel {
-    position: relative; /*added for positioning */
+  position: relative; /*added for positioning */
+  overflow: hidden;
+  background-color: white;
+  padding: 1rem 0 0 0;
+  box-shadow: 0 -4px 8px -6px rgba(0, 0, 0, 0.4); /* top shadow only */
+}
+
+/* Fading edges added */
+.logo-carousel::before,
+.logo-carousel::after {
+content: "";
+position: absolute;
+top: 0;
+width: 80px;
+height: 100%;
+z-index: 1;
+pointer-events: none;
+}
+.logo-carousel::before {
+left: 0;
+background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.logo-carousel::after {
+right: 0;
+background: linear-gradient(to left, white 0%, transparent 100%);
+}
+.logo-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.logo-track img {
+  height: 125px; /* or your preferred size */
+  margin: 0 2rem;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.logo-track img:hover {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.emoji {
+  font-family: system-ui, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif;
+  font-size: 1.2em; /* or whatever looks best */
+} 
+ 
+ 
+ 
+ 
+ 
+ /* Wip for logo carousel */
+ /*Working wrapper
+ .logo-carousel {
+    position: relative; /*added for positioning 
     overflow: hidden;
     background-color: white;
     padding: 1rem 0 0 0;
-    box-shadow: 0 -4px 8px -6px rgba(0, 0, 0, 0.4); /* top shadow only */
+    box-shadow: 0 -4px 8px -6px rgba(0, 0, 0, 0.4); /* top shadow only 
   }
   
-  /* Fading edges added */
+  /* Fading edges added 
 .logo-carousel::before,
 .logo-carousel::after {
   content: "";
@@ -31,13 +97,13 @@
 .logo-track {
   display: flex;
   white-space: nowrap;
-  /*animation: scroll 15s linear infinite;*/
+  /*animation: scroll 15s linear infinite;
   gap: 4rem;
 }
 .logo-track img {
-  height: 125px; /* or your preferred size */
+  height: 125px; /* or your preferred size 
   /*margin: 0 2rem;
-  width: auto;*/
+  width: auto;
   object-fit: contain;
   opacity: 0.5;
   transition: opacity 0.3s;
@@ -50,7 +116,7 @@
 @keyframes scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
+}*/
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
