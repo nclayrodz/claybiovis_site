@@ -1,32 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js" >
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Site Under Construction</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fefefe;
-      color: #333;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
-    p {
-      font-size: 1.2rem;
-    }
-    .emoji {
-      font-size: 7rem;
-      margin-bottom: 20px;
-    }
-  </style>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>naomi clay</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/added.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+       <!-- fonts
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
 </head>
-<body>
-  <div class="emoji">🚧</div>
-  <h1>Under Construction</h1>
-  <p>This portfolio site is currently under maintenance!<br>Please check back soon!</p>
+
+
+<body id="top">
+
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo_cute.png" alt="Homepage">
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a class="smoothscroll" href="#intro">intro</a></li>
+                        <li><a href="pages/about.html">about</a></li>
+                        <li><a class="smoothscroll" href="#works">works</a></li>
+                        <li><a class="smoothscroll" href="#footer">contact</a></li>
+                    </ul> <!-- s-header__menu-links -->    
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
+
+
+        <!-- # intro
+        ================================================== -->
+        <section id="intro" class="s-intro target-section">
+
+            <div class="row s-intro__content width-sixteen-col">
+                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+                    
+                    <div class="s-intro__content-text">
+
+                        
+                        <h1 style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);" class="s-intro__content-title">
+                        Bringing new perspectives <br>
+                        to scientific storytelling ⊹˖ ݁ <br>
+                        </h1>                            
+                        <div style="text-shadow: 0.5px 0.5px 0.5px rgba(104, 98, 98, 0.6);" class="s-intro__content-pretitle text-pretitle">Hello, i'm naomi and I am a medical illustrator based in toronto.</div>
+                        <div class="s-intro__content-btns">
+                            <a class="btn" href="pages/about.html">about me</a>
+                            <a class="smoothscroll btn btn--stroke" href="#footer">get in touch</a>
+                        </div> <!-- s-intro__content-btns -->   
+
+                    </div> <!-- s-intro__content-text -->                     
+                    
+                </div> <!-- s-intro__content-inner -->  
+            </div> <!-- s-intro__content -->
+
+            <ul class="s-intro__social social-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/naomiclay">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 18 18" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+                        <span class="u-screen-reader-text">LinkedIn</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="https://www.instagram.com/visualsbynao/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"></path></svg>
+                        <span class="u-screen-reader-text">Instagram</span>
+                    </a>
+                </li>
+            </ul> <!-- end s-intro__social -->
+
+            <div class="s-intro__content-media">                               
+                <img src="images/11.png" srcset="images/11.png 1x, images/11.png 2x" alt="">
+            </div> <!-- s-intro__content-media -->                
+
+            <div class="s-intro__btn-download">
+                <a class="btn btn--stroke" href="docs/Naomi_Clay_Resume.pdf">Get My CV</a>
+            </div> <!-- end s-intro__btn-download -->
+            
+            <div class="s-intro__scroll-down">
+                <a href="#works" class="smoothscroll">
+                    <div class="scroll-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg>
+                    </div>
+                    <span class="scroll-text u-screen-reader-text">Scroll Down</span>
+                </a>
+            </div> <!-- s-intro__scroll-down -->
+
+        </section> <!-- end s-intro -->
+       
+    <!--Wrapper with logos-->
+    <section class="logo-carousel">
+        <h6><center>Proud to have collaborated with</center></h6>
+        <div class="logo-track">
+            <img src="images/carousel/uhn.png" alt="UHN">
+            <img src="images/carousel/temerty.png" alt="Temerty Medicine">
+            <img src="images/carousel/tvasurg.png" alt="TVASurg">
+            <img src="images/carousel/uoft.png" alt="University of Toronto">
+            <img src="images/carousel/vs.png" alt="Vesalius Trust">
+            <img src="images/carousel/Gov.png" alt="Fisheries and Oceans Canada">
+            <img src="images/carousel/imgenium.png" alt="Imgenium">
+            <!-- Repeat logos if you want it to scroll smoothly -->
+            <img src="images/carousel/uhn.png" alt="UHN">
+            <img src="images/carousel/temerty.png" alt="Temerty Medicine">
+            <img src="images/carousel/tvasurg.png" alt="TVASurg">
+            <img src="images/carousel/uoft.png" alt="University of Toronto">
+            <img src="images/carousel/vs.png" alt="Vesalius Trust">
+            <img src="images/carousel/Gov.png" alt="Fisheries and Oceans Canada">
+            <img src="images/carousel/imgenium.png" alt="Imgenium">
+        </div>
+    </section>
+
+        <!-- # works
+        ================================================== -->
+        <section id="works" class="s-works target-section" style="margin-top: 0; padding-top: 4rem;"></section>
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="✧ ݁">
+                        <h2 class="text-display-title">featured work</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+           
+            <div class="row folio-entries">
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-molvis.jpg" class="entry__link glightbox" data-glightbox="title: Vine Of The Soul; description: .entry__desc-01">
+                        <div class="entry__thumb">
+                            <img src="images/folio/molvis.jpg" srcset="images/folio/molvis.jpg 1x, images/folio/molvis@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Vine of The Soul</h4>
+                            <div class="entry__cat">Molecular Visualization Infographic</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-01">
+                        <p>
+                        Progress Work Coming Soon!</a>
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-fingers.jpg" class="entry__link glightbox" data-glightbox="title: Sneak peak of my MRP (more coming soon!); description: .entry__desc-02">
+                        <div class="entry__thumb">
+                            <img src="images/folio/finger.jpg" srcset="images/folio/finger.jpg 1x, images/folio/finger@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">TONO: Visualizing Eczema in Every Skin Tone</h4>
+                            <div class="entry__cat">Master Research Project</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-02">
+                        <p>
+                            Progress Work Coming Soon!</a>
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-foot.png" class="entry__link glightbox" data-glightbox="title:; description: .entry__desc-04">
+                        <div class="entry__thumb">
+                            <img src="images/folio/foot.jpg" srcset="images/folio/foot.jpg 1x, images/folio/foot@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Ligaments of the Foot</h4>
+                            <div class="entry__cat">Vector Illustration</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-04">
+                        <!--p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p-->
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-editorial.jpg" class="entry__link glightbox" data-glightbox="title:">
+                        <div class="entry__thumb">
+                            <img src="images/folio/editorial.png" srcset="images/folio/editorial.png 1x, images/folio/editorial@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Lead the  Way</h4>
+                            <div class="entry__cat">Editorial Cover</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-03">
+                        <!--p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p-->
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-squirell.png" class="entry__link glightbox" data-glightbox="title:; description: .entry__desc-05">
+                        <div class="entry__thumb">
+                            <img src="images/folio/squirell.jpg" srcset="images/folio/squirell.jpg 1x, images/folio/squirell@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Southern Flying Squirell Skull</h4>
+                            <div class="entry__cat">DICOM Data Set: 3D Model</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-05">
+                        <!--p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p-->
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-kidney.jpg" class="entry__link glightbox" data-glightbox="title: Tropical; description: .entry__desc-06">
+                        <div class="entry__thumb">
+                            <img src="images/folio/kidney.png" srcset="images/folio/kidney.png 1x, images/folio/kidney@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Show Me the Unseeable: The Flow of Urine</h4>
+                            <div class="entry__cat"></div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-06">
+                        <!--p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="portfolio-single-2.html">Project Link</a>.
+                        </p-->
+                    </div>
+                </div> <!-- entry --> 
+
+            </div> <!-- folio entries -->
+        </section> <!-- end s-works --> 
+        <!--hr class="fancy"-->
+       
+
+        <section style="color: #cecece;"><center>· · ─ ·⟡· ─ · ·</center></section>
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark">
+                        <h2 class="text-display-title">have a project in mind? ◡̈</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+
+                <div style="margin-top: 0; padding-top: rem;" class= column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        Lets create something meaningful together!
+                    </p>               
+                </div> <!-- end section-footer__about -->
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>socials</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.instagram.com/visualsbynao/">instagram</a></li> 
+                                <li><a href="https://www.linkedin.com/in/naomiclay">linkedin</a></li>  
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>contact me</h5>
+                            <ul class="link-list">
+                                <li></li><a href="mailto:naomi.clay@mail.utoronto.ca">naomi.clay@mail.utoronto.ca</a></li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div> <!-- end section-footer__site-links -->
+
+            </div> <!-- end section-footer__content -->
+
+
+            <div class="row s-footer__buttons">
+               
+                <div class="column xl-6 tab-12">                    
+                    <a href="docs/Naomi_Clay_Resume.pdf" class="btn btn--stroke btn--large u-fullwidth">my cv</a>
+                </div>
+                
+                <div class="column xl-6 tab-12">
+                    <a href="mailto: naomi.clay@mail.utoronto.ca" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+            </div> <!-- end section-footer__buttons -->              
+            
+            <div class="row s-footer__bottom">
+                
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li>
+                            <a href="https://www.instagram.com/visualsbynao/">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"></path></svg>
+                                <span class="u-screen-reader-text">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/naomiclay">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 18 18" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+                                <span class="u-screen-reader-text">LinkedIn</span>
+                            </a>
+                        </li> 
+                    </ul> 
+                </div> <!-- end section-footer__social -->
+
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Naomi Clay 2025. All rights reserved.</span> 
+                        <span style="font-size: xx-small;">Design by <a href="https://styleshout.com/">StyleShout</a> Distribution by <a href="https://themewagon.com">ThemeWagon.</a> </span>
+
+            </div> <!-- end section-footer__bottom -->          
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div> <!-- end ss-go-top -->
+            
+        </footer> <!-- end s-footer -->
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>

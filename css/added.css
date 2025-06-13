@@ -1,0 +1,56 @@
+ /*Working wrapper*/
+ .logo-carousel {
+    position: relative; /*added for positioning */
+    overflow: hidden;
+    background-color: white;
+    padding: 1rem 0 0 0;
+    box-shadow: 0 -4px 8px -6px rgba(0, 0, 0, 0.4); /* top shadow only */
+  }
+  
+  /* Fading edges added */
+.logo-carousel::before,
+.logo-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.logo-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.logo-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+}
+  .logo-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .logo-track img {
+    height: 125px; /* or your preferred size */
+    margin: 0 2rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  
+  .logo-track img:hover {
+    opacity: 1;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
