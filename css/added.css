@@ -60,20 +60,23 @@ background: linear-gradient(to left, white 0%, transparent 100%);
 } 
  
 .collab-heading {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   text-align: center;
-  margin: 2rem auto;
-  max-width: 100%;
+  letter-spacing: 0.05em;
+  margin: 1rem auto;
+  padding: 0 1rem;  /* <-- THIS adds horizontal breathing room */
+  max-width: 90%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .collab-heading {
     font-size: 1rem;
-    padding: 0 1rem;
-    max-width: 90%;
+    padding: 0 1.5rem; /* more generous on small screens */
+    max-width: 100%;
   }
 }
- 
  
  
  /* Wip for logo carousel */
