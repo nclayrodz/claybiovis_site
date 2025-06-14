@@ -396,6 +396,17 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+    
+        document.onkeydown = function(e) {
+          if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C"))) {
+            return false;
+          }
+        };
+      </script>
     <!--script>
         const track = document.getElementById('logoTrack');
         const clone = track.cloneNode(true);

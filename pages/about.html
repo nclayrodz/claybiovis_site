@@ -300,7 +300,17 @@
     ================================================== -->
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
-    <script src="js/wave-animate.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+    
+        document.onkeydown = function(e) {
+          if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C"))) {
+            return false;
+          }
+        };
+      </script>
 
 </body>
 </html>
