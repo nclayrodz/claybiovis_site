@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js" >
 <head>
-
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
@@ -26,6 +25,94 @@
         }
         .s-styles .intro h1 {
             margin-top: 0;
+        }
+        
+        body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+        }
+
+        header.low-grain-banner {
+        background-color: #e0e0e0;
+        padding: 2rem 1rem;
+        text-align: center;
+        }
+
+        main {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+        }
+
+        .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        }
+
+        .subtitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        }
+
+        .text-block {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        max-width: 75ch;
+        }
+
+        .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+        }
+
+        .grid .item {
+        background-color: #fff;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        text-align: center;
+        }
+
+        img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+        border-radius: 4px;
+        }
+
+        @media screen and (max-width: 600px) {
+        header.low-grain-banner {
+            padding: 1.5rem 0.75rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+        }
+
+        .text-block {
+            font-size: 0.95rem;
+        }
+
+        .grid {
+            grid-template-columns: 1fr;
+        }
         }
     </style>
 
@@ -94,120 +181,64 @@
 
             </div> <!-- end s-header__inner -->
         </header> <!-- end s-header -->
-        <!-- # about section-->
-        <section id="about" class="s-about target-section">
-            <div class="row s-about__content">
-                <div class="column xl-12">
-                    <h2 class="text-display-title">hi! i'm naomi</h2>
-                   
+
+        <main>
+            <section class="intro">
+              <h2 class="section-title">[Title]</h2>
+              <p class="text-block">[Text]</p>
+              <p class="text-block">[Text]</p>
+              <p class="text-block">[Text]</p>
+            </section>
         
-                    <div class="row">
-                        <!-- Profile Image Column -->
-                        <div class="column xl-5 lg-6 md-12">
-                            <img src="../images/pfp2.png" alt="Naomi Clay" class="s-about__photo" style="max-width: 100%; border-radius: 12px;">
-                        </div>
+            <section class="audience">
+              <h3 class="subtitle">Bigger Subtitle</h3>
+              <p class="text-block">[Text]</p>
+            </section>
         
-                        <!-- Text Column -->
-                        <div class="column xl-7 lg-6 md-12">
-                            <p class="attention-getter">
-                                I’m a medical illustrator based in Toronto, with a passion for <mark>mental health, diversity, and making science accessible to all audiences.</mark> I create visuals that spark understanding, empathy, and curiosity, with the audience always in mind. Whether I’m prototyping a digital tool or illustrating an educational resource, <mark>I care deeply about clarity, inclusivity, accessibility, and impact.</mark>I’m always learning, and always looking for ways to help people see the world a little differently.
-                            </p>
+            <section class="skin-maps">
+              <h3 class="subtitle">Skin Tone Maps</h3>
+              <div class="grid">
+                <div class="item">
+                  <img src="#" alt="Map Image" />
+                  <p>Text</p>
+                </div>
+                <div class="item">
+                  <img src="#" alt="Map Image" />
+                  <p>Text</p>
+                </div>
+              </div>
+            </section>
         
-                            <p class="attention-getter">
-                                Outside of design, you’ll find me reading, doing yoga, at a fun fitness class (currently loving boxing!) or looking for a new hobby to try.  
-                            </p>
-                            <div class="column xl-6 tab-12">
-                                <a style="border-radius: 4rem;" class="smoothscroll btn btn--primary" href="#footer" class="btn btn--primary btn--large u-fullwidth">contact me</a>
-                            </div>
-                        </div>
-                    </div> <!-- end inner row -->
+            <section class="modeling">
+              <h3 class="subtitle">3D Modeling in Maya</h3>
+              <p class="text-block">[Text]</p>
+              <img src="#" alt="Screenshot of Model" />
+            </section>
         
-                    <div class="grid-list-items s-about__blocks">
-
-                        <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Software</h4>
-                             <!--ul class="s-about__list"-->
-                             <ul class="disc">
-                                <li>Adobe Creative Suite
-                                </li>
-                                <li>
-                                    Maya, C4D, ZBrush
-                                </li>
-                                <li>
-                                    Figma, Miro 
-                                </li>
-                                <li>
-                                  Visual Studio Code  
-                                </li>
-                            </ul>
-                        </div> <!--end s-about__block -->
-
-                        <!--div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Awards</h4>
-
-                            <ul class="s-about__list">
-                                <li>
-                                    <a href="#0">
-                                        Site Of The Month
-                                        <span>Awwwards — 2023</span>
-                                    </a>                                        
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        Site Of The Day
-                                        <span>Awwwards — 2023</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        Agency of The Year
-                                        <span>Awwwards — 2022</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        FWA of The Month
-                                        <span>FWA — 2022</span>
-                                    </a>
-                                </li><li>
-                                    <a href="#0">
-                                        Site Of The Month
-                                        <span>Awwwards — 2022</span>
-                                    </a>                                        
-                                </li>
-                            </ul>
-                        </div> <end s-about__block -->
-                        
-                        <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Skills</h4>
-
-                            <!--ul class="s-about__list"-->
-                            <ul class="disc">
-                                <li>
-                                    Illustration
-                                </li>
-                                <li>
-                                   3D Modeling
-                                </li>
-                                <li>
-                                    Prototyping
-                                </li>
-                                <li>
-                                    Frontend Development
-                                </li>
-                                <li>
-                                    UI/UX Design 
-                                </li>
-                            </ul>
-                        </div> <!--end s-about__block -->
-
-                    </div> <!-- grid-list-items -->
-
-                </div> <!--end column -->
-            </div> <!--end s-about__content -->
-            
-        </section> <!-- end s-about -->   
-            <!-- # footer 
+            <section class="camera-setup">
+              <h3 class="subtitle">Setting Up Cameras</h3>
+              <p class="text-block">[Text]</p>
+            </section>
+        
+            <section class="rendering">
+              <h3 class="subtitle">Render and Overlay</h3>
+              <p class="text-block">[Text]</p>
+              <img src="#" alt="2D Render Overlay" />
+            </section>
+        
+            <section class="stats-breakdown">
+              <h3 class="subtitle">Stat Breakdown</h3>
+              <img src="#" alt="Still Frame" />
+              <p class="text-block">[Text]</p>
+            </section>
+        
+            <section class="final-section">
+              <h3 class="subtitle">Final Notes / Dermatology Info</h3>
+              <p class="text-block">[Text]</p>
+              <img src="#" alt="Dermatology Diagram" />
+            </section>
+          </main>
+    <!-- # footer 
         ================================================== -->
         <footer id="footer" class="s-footer target-section">
 
