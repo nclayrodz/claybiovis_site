@@ -146,3 +146,22 @@ h6.collab-heading {
     width: 40px;         /* narrower fading edges on mobile */
   }
 }
+
+.special-hover .entry__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.special-hover .entry__thumb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(188, 243, 249, 0.5); /* <- your custom color ADDD ALL THREEE*/
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.special-hover:hover .entry__thumb::before {
+  opacity: 1;
+}
