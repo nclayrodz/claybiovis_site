@@ -1803,8 +1803,8 @@ img,
 
 #loader {
     position: relative;
-    width   : 4px;
-    height  : 4px;
+    width   : 10px;
+    height  : 10px;
     padding : 0;
     display : inline-block;
 }
@@ -1812,8 +1812,8 @@ img,
 #loader>div {
     content      : "";
     background   : var(--color-loader);
-    width        : 4px;
-    height       : 4px;
+    width        : 10px;
+    height       : 10px;
     position     : absolute;
     top          : 0;
     left         : 0;
