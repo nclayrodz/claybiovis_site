@@ -156,7 +156,7 @@ h6.collab-heading {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(188, 243, 249, 0.5); /* <- your custom color ADDD ALL THREEE*/
+  background-color: #bcf3f980; /* <- your custom color ADDD ALL THREEE*/
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
