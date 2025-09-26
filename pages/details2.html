@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Fruitful Partnership • Case Study Template</title>
+  <meta name="description" content="Portfolio case study template inspired by bonniewang.ca — layout, interactions, and effects with image placeholders." />
+  <style>
+    /* =====================================================
+       Case Study Template — inspired by bonniewang.ca
+       ===================================================== */
+    :root{
+      --bg: #0d0f14;          /* deep ink */
+      --surface: #121521;     /* cards */
+      --ink: #e9ecf3;         /* main text */
+      --muted: #a7adc9;       /* secondary text */
+      --line: #23273a;        /* hairline borders */
+      --accent: #b6e7c9;      /* mint accent */
+      --radius: 18px;
+      --maxw: 1120px;
+      --elev: 0 18px 60px rgba(0,0,0,.35);
+    }
+
+    html, body{ height:100%; }
+    body{
+      margin:0; background: radial-gradient(1200px 480px at 12% -8%, rgba(182,231,201,.06), transparent 60%), var(--bg);
+      color:var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    /* Typography */
+    .eyebrow{ display:inline-block; font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; color:#0d1a14; background:var(--accent); padding:.45rem .7rem; border-radius:999px; }
+    h1{ font-size:clamp(2.1rem, 4vw, 3.4rem); line-height:1.08; margin:16px 0 12px; font-weight:800; }
+    h2{ font-size:clamp(1.4rem, 2.4vw, 2rem); line-height:1.2; margin:0 0 8px; font-weight:750; }
+    h3{ font-size:1rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+    p{ margin:0 0 1rem; color:var(--muted); max-width:70ch; }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:22px; }
+
+    /* Header */
+    header{ position:sticky; top:0; z-index:50; background:rgba(13,15,20,.6); backdrop-filter:saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
+    .nav{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .brand{ font-weight:800; letter-spacing:.2px; }
+    .menu{ display:flex; gap:22px; align-items:center; }
+    .menu a{ padding:8px 10px; border-radius:10px; }
+    .menu a:hover{ text-decoration:none; background:var(--surface); }
+    .menu-toggle{ display:none; border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:12px; padding:8px 12px; }
+    @media (max-width: 760px){ .menu{ display:none; } .menu-toggle{ display:inline-flex; } .menu.open{ position:absolute; inset:66px 12px auto; background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:8px; display:flex; flex-direction:column; box-shadow:var(--elev);} .menu.open a{ padding:12px; border-radius:12px; } }
+
+    /* Hero layout */
+    .hero{ padding:56px 0 24px; border-bottom:1px solid var(--line); }
+    .hero-grid{ display:grid; grid-template-columns: 3fr 1.4fr; gap:40px; align-items:start; }
+    .subtitle{ font-size:1.05rem; }
+    .meta{ position:sticky; top:92px; display:grid; gap:14px; background:transparent; }
+    .meta .card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; }
+    .meta .card p{ color:var(--ink); margin:0; }
+    @media (max-width: 960px){ .hero-grid{ grid-template-columns: 1fr; } .meta{ position:relative; top:0; }
+    }
+
+    /* Gallery */
+    .gallery{ padding:28px 0; display:grid; gap:20px; grid-template-columns:1fr; }
+    .shot{ border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:linear-gradient(180deg, #151827, #0f121c); transform:translateZ(0); }
+    .shot .ph{ aspect-ratio: 16 / 10; display:grid; place-items:center; color:var(--muted); font-weight:600; }
+    .shot:hover{ box-shadow:var(--elev); }
+    @media (min-width: 760px){ .gallery{ grid-template-columns: 1fr 1fr; } .shot.wide{ grid-column:1 / -1; aspect-ratio:auto; } }
+
+    /* Sections */
+    .section{ padding:34px 0; border-top:1px solid var(--line); }
+
+    /* Previous/Next */
+    .pager{ display:flex; justify-content:space-between; gap:16px; padding:26px 0; border-top:1px solid var(--line); }
+    .pager a{ display:block; background:var(--surface); border:1px solid var(--line); padding:14px 16px; border-radius:14px; text-decoration:none; }
+    .pager a:hover{ background:#0f1420; }
+
+    /* Contact */
+    .cta{ margin:40px 0 80px; background:linear-gradient(180deg, #121522, #0f121c); border:1px solid var(--line); border-radius:var(--radius); padding:22px; }
+    form{ display:grid; gap:12px; }
+    .row{ display:flex; gap:12px; }
+    .row>*{ flex:1; }
+    input, textarea{ width:100%; padding:12px 14px; border-radius:12px; background:#0d1019; border:1px solid var(--line); color:var(--ink); }
+    textarea{ min-height:120px; resize:vertical; }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; padding:12px 16px; background:var(--ink); color:#0b0f16; border:0; border-radius:12px; font-weight:700; cursor:pointer; }
+    .btn:hover{ filter:brightness(96%); }
+
+    /* Scroll reveal */
+    .reveal{ opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.revealed{ opacity:1; transform:none; }
+
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+    footer{ border-top:1px solid var(--line); color:var(--muted); padding:22px 0 60px; }
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">bonnie wang</a>
+      <nav class="menu" id="menu">
+        <a href="#work">work</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero / Intro + Sticky Meta -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Information Graphic</span>
+          <h1>A Fruitful Partnership:<br>The Fig and Fig Wasp</h1>
+          <p class="subtitle">This illustration aims to depict the intertwined lifecycles of the fig and fig wasp. Guided in a clockwise direction around the hero image through numbering and visual cues, the reader learns about how the two organisms contribute to a mutually beneficial relationship, allowing for propagation of life. Insets and close‑ups highlight meaningful events. Schematic illustrations balance visual complexity.</p>
+          <p class="subtitle">The technical goal was an infographic with clear hierarchy and narrative through text and space. Content density was tuned for readability while preserving context.</p>
+        </div>
+        <aside class="meta" aria-label="Project metadata">
+          <div class="card"><h3>Client</h3><p>Dr. Jodie Jenkinson</p></div>
+          <div class="card"><h3>Audience</h3><p>Educated lay audience</p></div>
+          <div class="card"><h3>Format</h3><p>Print (poster / infographic)</p></div>
+          <div class="card"><h3>Tools</h3><p>Illustrator, Photoshop</p></div>
+          <div class="card"><h3>Role</h3><p>Research, production artist</p></div>
+          <div class="card"><h3>Year</h3><p>2025</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Feature/Gallery -->
+    <section>
+      <div class="container gallery reveal">
+        <figure class="shot wide"><div class="ph">Placeholder Image — Hero</div></figure>
+        <figure class="shot"><div class="ph">Placeholder Image</div></figure>
+        <figure class="shot"><div class="ph">Placeholder Image</div></figure>
+        <figure class="shot"><div class="ph">Placeholder Image</div></figure>
+        <figure class="shot"><div class="ph">Placeholder Image</div></figure>
+        <figure class="shot"><div class="ph">Placeholder Image</div></figure>
+      </div>
+    </section>
+
+    <!-- Sections: Research / Rendering / Compositing -->
+    <section class="section">
+      <div class="container reveal">
+        <h2>Research & Ideation</h2>
+        <p>After identifying an interesting biomedical subject and conducting background research, several thumbnails explored layout options. A final comprehensive sketch followed peer and client feedback.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <h2>Rendering</h2>
+        <p>Working between Illustrator and Photoshop, the Grisaille method established values before color. Elements were prepared as modular components for later compositing.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <h2>Compositing</h2>
+        <p>All images, labels, and graphic devices were assembled in Illustrator to balance hierarchy and rhythm, then exported for print.</p>
+      </div>
+    </section>
+
+    <!-- Pager -->
+    <div class="container pager">
+      <a href="#prev" aria-label="Previous project">← Previous: NerveUs</a>
+      <a href="#next" aria-label="Next project">Next: Cellular Burnout →</a>
+    </div>
+
+    <!-- Contact CTA -->
+    <section class="container cta" id="contact">
+      <h2>Let’s talk!</h2>
+      <p>Interested in collaborating? Leave a message and I’ll be in touch shortly.</p>
+      <form id="contactForm" novalidate>
+        <div class="row">
+          <label class="sr-only" for="first">First Name</label>
+          <input id="first" name="first" placeholder="First Name" required>
+          <label class="sr-only" for="last">Last Name</label>
+          <input id="last" name="last" placeholder="Last Name" required>
+        </div>
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" name="email" placeholder="Email" type="email" required>
+        <label class="sr-only" for="msg">Message</label>
+        <textarea id="msg" name="msg" placeholder="Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+        <p id="formNote" aria-live="polite" style="margin:6px 0 0; color:var(--muted);"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menu = document.getElementById('menu');
+    const toggle = document.getElementById('menuToggle');
+    toggle?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // Scroll reveal (fade & lift), inspired by the site’s subtle entrances
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if(e.isIntersecting){
+          e.target.classList.add('revealed');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Lightweight lightbox for placeholders (optional)
+    (function initLightbox(){
+      const shots = document.querySelectorAll('.shot');
+      const modal = document.createElement('div');
+      modal.style.cssText = `position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.6);z-index:60;`;
+      modal.innerHTML = `<div id="lb" style="max-width:92vw;max-height:86vh;background:#0d0f18;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);">\
+        <div style=\"padding:10px;display:flex;justify-content:flex-end;\">\
+          <button id=\"lbClose\" class=\"btn\" style=\"padding:6px 10px;\">Close</button>\
+        </div>\
+        <div style=\"padding:0 18px 18px;\">\
+          <div class=\"ph\" style=\"aspect-ratio:16/10;display:grid;place-items:center;color:var(--muted);\">Placeholder Image (Modal)</div>\
+        </div>\
+      </div>`;
+      document.body.appendChild(modal);
+      const close = () => (modal.style.display = 'none');
+      modal.addEventListener('click', e => { if(e.target === modal) close(); });
+      modal.querySelector('#lbClose')?.addEventListener('click', close);
+      shots.forEach(s => s.addEventListener('click', () => (modal.style.display = 'grid')));
+    })();
+
+    // Contact form demo (no backend)
+    const form = document.getElementById('contactForm');
+    const note = document.getElementById('formNote');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      if(!data.first || !data.last || !data.email || !data.msg){ note.textContent = 'Please fill in all fields.'; return; }
+      note.textContent = 'Thank you! Your message has been captured locally (demo).';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
