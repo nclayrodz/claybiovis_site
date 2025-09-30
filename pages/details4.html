@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>naomi clay</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <style type="text/css" media="screen">
+        .s-styles {
+            padding-top: var(--vspace-5);
+            padding-bottom: var(--vspace-2);
+            position: relative;
+        }
+        .s-styles .intro h1 {
+            margin-top: 0;
+        }
+        
+      /*  body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+        }
+
+        header.low-grain-banner {
+        background-color: #e0e0e0;
+        padding: 2rem 1rem;
+        text-align: center;
+        }
+
+        /*main {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+        }
+
+        .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        }
+
+        .subtitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        }
+
+        .text-block {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        max-width: 75ch;
+        }
+
+        .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+        }
+
+        .grid .item {
+        background-color: #fff;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        text-align: center;
+        }
+
+        img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+        border-radius: 4px;
+        }
+
+        @media screen and (max-width: 600px) {
+        header.low-grain-banner {
+            padding: 1.5rem 0.75rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+        }
+
+        .text-block {
+            font-size: 0.95rem;
+        }
+
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        }*/
+    :root{
+      --ink:#0b1b2b;            /* primary text */
+      --ink-soft:#2a4460;       /* secondary text */
+      --line:#16395a33;         /* rule color */
+      --link:#1b64f2;           /* link color */
+      --bg:#fcfcfc;             /* page tint */
+      --card:#ffffff;           /* panels */
+      --max:1100px;             /* content measure */
+    }
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink); background:var(--bg);
+      font:400 18px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:72px 24px}
+
+    /* Headings — serif for section titles */
+    h1,h2,h3{font-family: ui-serif, Georgia, "Times New Roman", Times, serif; margin:0 0 .35em}
+    h1{font-size: clamp(36px, 5vw, 64px); letter-spacing:.01em}
+    h2{font-size: clamp(28px, 3.2vw, 44px)}
+    h3{font-size: clamp(22px, 2.2vw, 28px)}
+    p{margin:.5em 0 1em}
+    .lede{font-size:20px; color:var(--ink-soft)}
+
+    /* Utility */
+    .mt-48{margin-top:48px}
+    .mt-64{margin-top:64px}
+    .muted{color:var(--ink-soft)}
+    .rule{height:1px; background:var(--line); margin:32px 0}
+    a{color:var(--link); text-underline-offset:2px}
+
+    /* ===== HERO ===== */
+    .hero{padding: top 20px;}
+    .heroTitle{font-size: clamp(44px, 6vw, 76px); font-weight:700; padding-top:28px}
+    .subtitle{font-size: clamp(18px, 2.2vw, 26px); margin-top:8px; color:var(--ink-soft)}
+
+    /* ===== INTRO GRID (copy + meta) ===== */
+    .intro{display:grid; grid-template-columns: 1.3fr .8fr; gap:48px; align-items:start}
+    .intro .meta{position:sticky; top:24px}
+    .kvs{display:grid; gap:16px}
+    .kv{background:var(--card); padding:18px 20px; border:1px solid #dfe7f5; border-radius:12px}
+    .kv h4{margin:0 0 8px; font:600 14px/1.2 system-ui; letter-spacing:.06em; text-transform:uppercase; color:#3a5a82}
+    .kv p{margin:0}
+
+    /* ===== RESEARCH SECTION ===== */
+    .section{margin-top:72px}
+    .sectionHeader{display:flex; align-items:flex-end; justify-content:space-between; gap:16px}
+    .sectionHeader .kicker{color:var(--ink-soft)}
+
+    /* Accordion */
+    .accordion{margin-top:24px; border-top:1px solid var(--line)}
+    .acc{
+      border-bottom:1px solid var(--line);
+      background:transparent
+    }
+    .accBtn{
+      width:100%; padding:22px 0; background:none; border:0; text-align:left;
+      display:flex; justify-content:space-between; align-items:center; gap:16px;
+      font:600 24px/1.25 ui-serif, Georgia, serif; color:var(--ink); cursor:pointer
+    }
+    .accBtn .pm{
+        display: inline-flex;        /* replaces grid */
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        line-height: 1;              /* prevents baseline drift */
+        transform: translateY(1px);  /* tweak as needed */
+}
+
+    /*.accBtn .pm{flex:0 0 28px; height:28px; border:1px solid #a7bfdc; border-radius:50%; display:grid; place-items:center; font:600 18px/1 system-ui; color:#3a5a82 }*/
+    .accPanel{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+    .accPanel-inner{padding:0 0 22px 0}
+    .acc.open .accPanel{max-height:900px}
+
+    ul{padding-left:24px; margin:0}
+    li{margin:8px 0}
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px){
+      .intro{grid-template-columns: 1fr; gap:28px}
+      .intro .meta{position:relative}
+    }
+    @media (max-width: 520px){
+      .wrap{padding:56px 18px}
+      .accBtn{font-size:20px}
+    }
+
+            /* Hero container */
+        .page-hero{
+        position:relative;
+        width:100%;
+        overflow:hidden;
+        background: var(--bg, #fff);
+        border-bottom:0px solid var(--line);
+        }
+
+        /* Image fills width; keep a nice crop with object-fit */
+        .page-hero__img{
+        width:100%;
+        height: clamp(220px, 40vh, 700px); /* responsive height */
+        object-fit: cover;
+        display:block;
+        }
+
+        /* Text overlay */
+        .page-hero__overlay{
+        position:absolute; inset:auto 0 0 0; /* bottom overlay */
+        padding: clamp(16px, 4vw, 32px);
+        color: #fff;
+        background:
+            linear-gradient(to top, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
+        }
+
+        /* Title + subtitle */
+        .page-hero__title{
+        margin:0 0 4px 0;
+        font: 700 clamp(28px, 4vw, 48px)/1.1 ui-serif, Georgia, serif;
+        letter-spacing: -0.02em;
+        }
+        .page-hero__subtitle{
+        margin:0;
+        font: 500 clamp(14px, 1.8vw, 18px)/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        opacity:.95;
+        }
+        
+
+        /* Reduce overlay padding on very small screens */
+        @media (max-width: 480px){
+        .page-hero__overlay{ padding: 16px; }
+        }
+
+    </style>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+<body id="top">
+
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+
+                 <!--OG HEADER FOR WHEN I HAVE A LOGO READY
+                ================================================== -->
+                <!--div class="s-header__block"> 
+                    <div class="s-header__logo">
+                        <a class="logo" href="../index.html">
+                            <span class="logo-text">clay visuals</span>
+                        </a>
+                    </div-->
+               
+                <div class="s-header__block"> 
+                    <div class="s-header__logo">
+                        <a class="logo" href="../index.html">
+                            <img src="../images/logo_cute.png" alt="Homepage">
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li><a href="../index.html">home</a></li>
+                        <li class="current"><a href="pages/about.html">about</a></li>
+                        <li><a href="../index.html#works">works</a></li>
+                        <li><a class="smoothscroll" href="#footer">contact</a></li>
+                    </ul> <!-- s-header__menu-links -->    
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
+
+        <header class="page-hero">
+            <picture>
+              <!-- Large screens -->
+              <source media="(min-width: 1024px)" srcset="../images/procress/16.png">
+              <!-- Default -->
+              <img
+                class="page-hero__img"
+                src="../images/procress/16.png"
+                alt="Short, descriptive text about the header image"
+                loading="eager"
+                decoding="async"
+              >
+            </picture>
+          
+            <div class="page-hero__overlay">
+              <!--h1 class="page-hero__title">Page Title</h1>
+              <p class="page-hero__subtitle">Optional subtitle or brief description</p>
+            </div-->
+          </header>
+        <!-- # main content
+        ================================================== -->
+          <main class="wrap" id="content"> 
+            <!-- ===== HERO ===== -->
+            <header class="hero" aria-labelledby="title">
+              <h1 id="title" class="heroTitle">TONO: Visualizing Eczema in Every Skintone </h1>
+              <p class="subtitle">A web-based reference tool designed to improve how eczema is identified across all skin tones. </p>
+            </header>
+        
+            <!-- ===== INTRO: summary left + meta right ===== -->
+            <section class="intro mt-48" aria-label="Project summary and details">
+              <div class="summary">
+                <p>TONO is a web-based reference tool designed to improve how eczema is identified across all skin tones. 
+                    It provides healthcare professionals with illustrated images of eczema on diverse skin tones and varying severities, 
+                    aiming to enhance diagnostic accuracy and patient care.</p>
+                
+                <p> Clinicians can select an eczema type, body region, skin tone, and severity to instantly see the corresponding image, with concise descriptors to aid recognition and differential diagnosis.
+                    A built-in Compare tool (side-by-side or draggable slider) highlights differences between tones and severities, reducing missed or misread cues on darker skin. The interface is clean and responsive; the project is an ongoing MRP focused on equitable, consistent visual references. </p>
+                <p>Take a look at TONO's viewer and explore more <a href="https://tonovisualize.github.io/pages/viewer.html" aria-label="Open prototype in a new tab" target="_blank" rel="noopener">here</a>.</p>
+              </div>
+        
+              <aside class="meta" aria-label="Project details sidebar">
+                <div class="kvs">
+                  <div class="kv">
+                    <h4>Role</h4>
+                    <p>UI/UX Design, Front‑End Development, Illustration, Medical Content Research and Writing</p>
+                  </div>
+                  <div class="kv">
+                    <h4>Format</h4>
+                    <p>Website (optimized for mobile)</p>
+                  </div>
+                  <div class="kv">
+                    <h4>Tools</h4>
+                    <p>Adobe Photoshop, Procreate, Autodesk Maya, VS Code</p>
+                  </div>
+                  <div class="kv">
+                    <h4>Audience</h4>
+                    <p>Primary Care Physicians</p>
+                  </div>
+                  <div class="kv">
+                    <h4>Content Advisors</h4>
+                    <p>Prof. Shehryar Saharan</p>
+                    <p>Dr. John Wong</p>
+                  </div>
+                </div>
+              </aside>
+            </section>
+        
+            <!-- ===== RESEARCH ===== -->
+            <section class="section" aria-labelledby="research">
+              <div class="sectionHeader">
+                <h2 id="research">Creating TONO...</h2>
+                <!--p class="kicker muted">Overview of methods and findings</p-->
+              </div>
+              <p class="muted"></p>
+              <!--div class="rule" role="presentation"></div-->
+        
+              <div class="accordion" role="tablist">
+                <!-- Item 1 (expanded by default) -->
+                <article class="acc open" aria-expanded="true">
+                  <button class="accBtn" aria-controls="lit-panel" aria-expanded="true">
+                    <span><h6>Literature Review and Background Research</h6></span>
+                    <span class="pm" aria-hidden="true">–</span>
+                  </button>
+                  <div id="lit-panel" class="accPanel" role="region" aria-labelledby="lit-btn">
+                    <div class="accPanel-inner">
+                      <ul>
+                        <h6 class="muted">Workflow</h6>
+                        <figure>
+                            <img src="../images/procress/workflow.png" 
+                            srcset="../images/procress/workflow.png 1000w, 
+                            ../images/procress/workflow.png 500w" 
+                            sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+                            
+                        </figure>
+                        <div class="column mob-12 md-6 stack-on-900">
+    
+                            <h6>A need for dermatological examples of skin of color</h6>
+            
+                            <p>
+                                Currently, there is a lack of visual references that accurately depict dermatological conditions on diverse skin tones. 
+                                This gap can lead to misdiagnosis or delayed treatment for patients with skin of color. 
+                                TONO aims to address this issue by providing a comprehensive and inclusive visual resource of eczema for healthcare professionals. </p>
+            
+                            <p>
+                            
+                            <h6>why illustrations if we have photos?</h6>
+                               
+                               <p> Illustrated images offer more control than photographs with consistent lighting, pose, and severity across skin tones. This makes 
+                                clinical features like erythema or scaling easier to see. Showing the same image of the condition across different tones also helps 
+                                highlight how presentations can vary by allowing for direct comparison. Since images of skin of color are often underrepresented in clinical references, illustration helps 
+                                fill that critical gap. </p>
+            
+                            <p>
+                          
+                            </p>
+                        </div>
+
+                        <h6>Visual treatment</h6>
+                        <li>  <p> Tono will include a seven types of eczema, such as: 
+                            <stong>atopic dermatitis, contact dermatitis, dyshidrotic eczema, statis dermatitis, nummular dermatitis, neurodermatitis and seborrheic dermatitis.</stong> 
+                        </p></li>
+                        <li>Each condition will be illustrated on four different skin tones: dark, medium, olive, and fair. Additionally it will show four severities: normal, mild, moderate and severe.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+        
+                <!-- Item 2 -->
+                <article class="acc" aria-expanded="false">
+                  <button class="accBtn" aria-controls="media-panel" aria-expanded="false">
+                    <span><h6>User Interviews</h6></span>
+                    <span class="pm" aria-hidden="true">+</span>
+                  </button>
+                  <div id="media-panel" class="accPanel" role="region">
+                    <div class="accPanel-inner">
+                      <p class="muted">User interviews were conducted to shape the design and content of TONO.</p>
+                      <ul>
+                        <li> Conducted during August-September 2024 </li>
+                        <li> Total of 5 interviews: Family Doctors, 3 residents and 2 attendings (only 1 attending with 1+ years of experience) </li>
+                        <li>    Interview focus:</li>
+                            Experience with skin of color
+                            <br>Current challenges in diagnosing skin conditions on diverse skin tones
+                            <br>Use of visual aids and references in clinical practice
+                            <br> Preferences for a digital tool (features, usability, accessibility)
+                            <br>Design and Content preference
+                            
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+        
+                <!-- Item 3 -->
+                <article class="acc" aria-expanded="false">
+                  <button class="accBtn" aria-controls="patient-panel" aria-expanded="false">
+                    <span><h6>Design Process</h6></span>
+                    <span class="pm" aria-hidden="true">+</span>
+                  </button>
+                  <div id="patient-panel" class="accPanel" role="region">
+                    <div class="accPanel-inner">
+                        <!--p class="muted">User interviews were conducted to shape the design and content of TONO.</p-->
+                        <ul>
+                            <li> 
+                                <p> Tono includes seven types of eczema, such as: 
+                                <stong>atopic dermatitis, contact dermatitis, dyshidrotic eczema, statis dermatitis, nummular dermatitis, neurodermatitis and seborrheic dermatitis.</stong> 
+                            </p></li>
+                            <li>Each condition is illustrated on four different skin tones: dark, medium, olive, and fair. Additionally it will show four severities: normal, mild, moderate and severe.</li>
+                        <figure>
+                            <img src="../images/procress/figma.jpg" 
+                            srcset="../images/procress/figma.jpg 1000w, 
+                            ../images/procress/figma.jpg 500w" 
+                            sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+                        </figure>
+                        <figure>
+                            <img src="../images/procress/sc1.png" 
+                            srcset="../images/procress/sc1.png 1000w, 
+                            ../images/procress/sc1.png 500w" 
+                            sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+                            <figcaption>
+                                Wireframes and prototypes were created in Figma to visualize the interface of TONO.
+                            </figcaption>
+                        </figure>
+                        
+                      
+                    </div>
+                  </div>
+                </article>
+
+
+                <!-- Item 4 -->
+                <article class="acc" aria-expanded="false">
+                    <button class="accBtn" aria-controls="media-panel" aria-expanded="false">
+                      <span><h6>Production</h6></span>
+                      <span class="pm" aria-hidden="true">+</span>
+                    </button>
+                    <div id="media-panel" class="accPanel" role="region">
+                      <div class="accPanel-inner">
+                        <!--p class="muted">Add bullets about competitive analysis, tone, readability, gaps in visuals, etc.</p>
+                        <ul>
+                          <li>Compared 12 existing PNI resources for accuracy, reading level, interactivity, and cultural relevance.</li>
+                          <li>Identified lack of before/after visuals, inconsistent terminology, and minimal accessibility features.</li-->
+                          <div class="xl-12 column">
+                            <h6 class="half-bottom">UV Maps</h6>
+                                <p>
+                                Using a 3D Model, I created variations of the original UV maps. The original was the "fair skintone". I created three variants of deeper skintones ensuring consistency across all images, and a realistic portrayal of the skin.
+                                </p>
+            
+                        </div>
+                         <!--<h4>1/4 Columns</h4>  -->
+                
+                         <div class="row">
+                
+                            <div class="xl-3 md-6 tab-12 column">
+                                <figure>
+                                    <img src="../images/procress/uv-dark.jpg" 
+                                    srcset="../images/procress/uv-dark.jpg 500w, 
+                                    images/wheel-500.jpg 500w" 
+                                    sizes="(max-width: 500px) 100vw, 500px" alt="">
+                
+                                    <figcaption>
+                                        Dark skintone
+                                    </figcaption>
+                                </figure>
+                            </div>
+                
+                            <div class="xl-3 md-6 tab-12 column">
+                                <figure>
+                                    <img src="../images/procress/uv-medium.jpg" 
+                                    srcset="../images/procress/uv-medium.jpg 500w, 
+                                    ../images/procress/uv-medium.jpg 500w" 
+                                    sizes="(max-width: 500px) 100vw, 500px" alt="">
+                
+                                    <figcaption>
+                                        Medium skintone
+                                    </figcaption>
+                                </figure>
+                            </div>
+                
+                            <div class="xl-3 md-6 tab-12 column">
+                                <figure>
+                                    <img src="../images/procress/uv-olive.jpg" 
+                                    srcset="../images/procress/uv-olive.jpg 500w, 
+                                    ../images/procress/uv-olive.jpg 500w" 
+                                    sizes="(max-width: 500px) 100vw, 500px" alt="">
+                
+                                    <figcaption>
+                                        Olive skintone 
+                                    </figcaption>
+                                </figure>
+                            </div>
+                
+                            <div class="xl-3 md-6 tab-12 column">
+                                <figure>
+                                    <img src="../images/procress/uv-light.jpg" 
+                                    srcset="../images/procress/uv-light.jpg 500w, 
+                                    ../images/procress/uv-light.jpg 500w" 
+                                    sizes="(max-width: 500px) 100vw, 500px" alt="">
+                
+                                    <figcaption>
+                                        Fair skintone
+                                    </figcaption>
+                                </figure>
+                            </div>
+            
+                            <!--Talk About Process-->
+            
+                            <!--div class="row">
+                                <div class="xl-12 column">
+                                <h6 class="half-bottom">Grid Columns</h6>
+                            </div>
+                            <div class="row">
+                
+                                <div class="column mob-12 md-6 stack-on-900">
+                                <figure>
+                                    <img src="images/wheel-500.jpg" 
+                                    srcset="images/wheel-1000.jpg 1000w, 
+                                    images/wheel-500.jpg 500w" 
+                                    sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+                
+                                    <figcaption>
+                                        Here is some random picture.
+                                    </figcaption>
+                                </figure>
+                                
+            
+                            </div>
+            
+                            </div>
+                                <div class="column mob-12 md-6">
+                    
+                                    <p style="margin-bottom: 2rem;"> I start by bringing my human model into Autodesk Maya. In the Hypershade editor, I link the albedo, roughness, specular, and normal maps, and 
+                                        make any necessary adjustments using the Attribute Editor. Once the textures look right, I set up cameras to focus on each body region I plan to render.
+                                    </p>
+                                </div>
+                            </div> <end row -->
+            
+                            <div class="row">
+                                <div class="xl-12 column">
+                                <h6 class="half-bottom">Prep for Rendering</h6>
+                            </div>
+            
+                            <div class="row">
+                
+                                </div>
+                                <div class="column mob-12 md-6">
+                    
+                                    <p>I import my UV maps (which serve as the base for each eczema condition I’ve drawn in Procreate ) and apply them to the model. 
+                                        I use the Remap Value node in the Hypershade to fine-tune visual aspects like body roughness. Once everything is calibrated, I render out the images.</p>
+                                </div>
+                                <div class="column mob-12 md-6 stack-on-900">
+                                    <figure>
+                                        <img src="../images/procress/render.jpg" 
+                                        srcset="../images/procress/render.jpg 1000w, 
+                                        ../images/procress/render.jpg 500w" 
+                                        sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+                    
+                                        <figcaption>
+                                            Example of a rendered image with the dark skintone UV map I created (Maya).
+                                        </figcaption>
+                                    </figure>
+                
+                                    </div>
+                            </div> <!-- end row -->
+            
+            
+                            <div class="row">
+                                <div class="xl-12 column">
+                                <h6 class="half-bottom"> Finetuning in Procreate</h6>
+                            </div>
+            
+                            <div class="row u-add-half-bottom">
+                                <div class="column mob-12 md-6">
+                                    
+                                    <div class="video-container">
+                                        <iframe src="https://player.vimeo.com/video/14592941?color=00a650&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                                     </div>
+                                
+            
+                            </div>
+                            
+                                </div>
+                                <div class="column mob-12 md-6">
+                                    <p>After rendering, I bring the images into Procreate and draw the eczema symptoms directly onto the skin. This phase focuses on clearly visualizing features like erythema, peeling, and thickening, 
+                                        while making sure they’re accurate and consistent across all skin tones.
+                                    </p>
+                                </div>
+                            </div> <!-- end row -->
+            
+                            <section style="width: 100%; text-align: center; padding: 2rem 0;">
+                            <img 
+                                src="../images/procress/process-statis.jpg" 
+                                alt="Process image"
+                                style="max-width: 100%; height: auto;" />
+                            </section>
+            
+                            <section style="width: 100%; text-align: center; padding: 2rem 0;">
+                                <img 
+                                    src="../images/procress/dif 2.png" 
+                                    alt="Process image"
+                                    style="max-width: 100%; height: auto;" />
+            
+                                    <!--figcaption>
+                                        Here is some random picture.
+                                    </figcaption-->
+                                </section>
+                              
+            
+                            
+                        
+                            <div class="xl-12 column">
+                            <!--h6 class="half-bottom"><center>Grid Columns</center></h6-->
+                            </div>
+                           
+                            <!--div style="text-align: center;">
+                                <div class="row">
+                                <div class="xl-4 md-12 column">
+                                    <figure>
+                                        <img src="images/wheel-500.jpg" 
+                                        srcset="images/wheel-1000.jpg 1000w, 
+                                        images/wheel-500.jpg 500w" 
+                                        sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+                    
+                                        <figcaption>
+                                            Here is some random picture.
+                                        </figcaption>
+                                    </figure>
+                                </div-->
+                    
+                             
+                                <div class="row">
+                                    <div class="xl-12 column">
+                                    <h6 class="half-bottom">Realistic Detail + Clear images</h6>
+                                </div>
+                                <div class="row">
+                    
+                                    <div class="column mob-12 md-6 stack-on-900">
+                                        <figure style="margin: 0;">
+                                            <img src="../images/linchification.jpg" 
+                                                 srcset="../images/linchification.jpg 500w, 
+                                                         ../images/linchification.jpg 500w" 
+                                                 sizes="(max-width: 500px) 100vw, 500px" 
+                                                 alt=""
+                                                 style="max-width: 100%; height: auto;" />
+                                          </figure>
+                                </div>
+                
+                                </div>
+                                    <div class="column mob-12 md-6">
+                        
+                                        <p style="margin-bottom: 2rem;"> This image is an example of mild to moderate lichenification. My goal across all conditions is to capture realistic skin detail while clearly showing key features like texture, 
+                                            scaling, and discoloration. This balance helps ensure that clinical signs are recognizable and consistent across all skin tones. Creating images doctors can easily reference.
+                                        </p>
+            
+                                        <p>TONO has a total of 224 images available for Medical Practitioners to reference.</p>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+              </div>
+            </section>
+          </main>
+        
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark">
+                        <h2 class="text-display-title">have a project in mind? <!--span class="emoji">◡̈</span--></h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+
+                <div style="margin-top: 0; padding-top: rem;" class= column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        Lets create something meaningful together!
+                    </p>               
+                </div> <!-- end section-footer__about -->
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>socials</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.instagram.com/visualsbynao/">instagram</a></li>   
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>contact me</h5>
+                            <ul class="link-list">
+                                <li></li><a href="mailto:naomi.clay@mail.utoronto.ca">naomi.clay@mail.utoronto.ca</a></li>
+                                <li><a href="https://www.linkedin.com/in/naomiclay">linkedin</a></li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div> <!-- end section-footer__site-links -->
+
+            </div> <!-- end section-footer__content -->
+
+
+            <div class="row s-footer__buttons">
+               
+                <div class="column xl-6 tab-12">                    
+                    <a href="../docs/Naomi_Clay_Resume.pdf" class="btn btn--stroke btn--large u-fullwidth">my cv</a>
+                </div>
+                
+                <div class="column xl-6 tab-12">
+                    <a href="mailto: naomi.clay@mail.utoronto.ca" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+            </div> <!-- end section-footer__buttons -->              
+            
+            <div class="row s-footer__bottom">
+                
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li>
+                            <a href="https://www.instagram.com/visualsbynao/">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"></path></svg>
+                                <span class="u-screen-reader-text">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/naomiclay">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 18 18" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+                                <span class="u-screen-reader-text">LinkedIn</span>
+                            </a>
+                        </li> 
+                    </ul> 
+                </div> <!-- end section-footer__social -->
+
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Naomi Clay 2025. All rights reserved.</span> 
+                        <span style="font-size: xx-small;">Design by <a href="https://styleshout.com/">StyleShout</a> Distribution by <a href="https://themewagon.com">ThemeWagon.</a> </span>
+
+            </div> <!-- end section-footer__bottom -->          
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <!--span>Back To Top</span>   
+            </div> < end ss-go-top -->
+            
+        </footer> <!-- end s-footer -->
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+    
+        document.onkeydown = function(e) {
+          if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C"))) {
+            return false;
+          }
+        };
+      </script>
+        <script>
+            // Accessible accordion with +/– toggles
+            const items = document.querySelectorAll('.acc');
+            items.forEach(acc => {
+              const btn = acc.querySelector('.accBtn');
+              const pm = acc.querySelector('.pm');
+              const panel = acc.querySelector('.accPanel');
+        
+              const setOpen = (isOpen)=>{
+                acc.classList.toggle('open', isOpen);
+                btn.setAttribute('aria-expanded', String(isOpen));
+                acc.setAttribute('aria-expanded', String(isOpen));
+                pm.textContent = isOpen ? '–' : '+';
+              };
+        
+              // initialize heights for the default-open item
+              const init = ()=>{ if(acc.classList.contains('open')) panel.style.maxHeight = panel.scrollHeight + 'px'; };
+              init();
+        
+              btn.addEventListener('click', ()=>{
+                const willOpen = !acc.classList.contains('open');
+                // close others
+                items.forEach(other=>{
+                  if(other!==acc){
+                    other.classList.remove('open');
+                    other.querySelector('.accBtn').setAttribute('aria-expanded','false');
+                    other.querySelector('.pm').textContent = '+';
+                    other.querySelector('.accPanel').style.maxHeight = 0;
+                  }
+                });
+                setOpen(willOpen);
+                panel.style.maxHeight = willOpen ? panel.scrollHeight + 'px' : 0;
+              });
+            });
+          </script> 
+
+    <!--script>
+        const track = document.getElementById('logoTrack');
+        const clone = track.cloneNode(true);
+        track.parentNode.appendChild(clone);
+      
+        let scrollAmount = 0;
+      
+        function animate() {
+          scrollAmount += 1; // smaller = slower scroll
+          if (scrollAmount >= track.offsetWidth) {
+            scrollAmount = 0;
+          }
+      
+          track.style.transform = `translateX(-${scrollAmount}px)`;
+          clone.style.transform = `translateX(-${scrollAmount}px)`;
+      
+          requestAnimationFrame(animate);
+        }
+      
+        animate();
+      </script-->
+      
+      
+
+</body>
+</html>
