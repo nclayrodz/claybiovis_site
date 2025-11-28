@@ -147,7 +147,7 @@
     a{color:var(--link); text-underline-offset:2px}
 
     /* ===== HERO ===== */
-    .hero{padding: top 20px;}
+    .hero{padding-top: 20px;}
     .heroTitle{font-size: clamp(44px, 6vw, 76px); font-weight:700; padding-top:28px}
     .subtitle{font-size: clamp(18px, 2.2vw, 26px); margin-top:8px; color:var(--ink-soft)}
 
@@ -240,7 +240,18 @@
         font: 500 clamp(14px, 1.8vw, 18px)/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
         opacity:.95;
         }
-        
+        /* Prevent image overflow on mobile */
+        .page-hero__img{
+    width:100%;
+    max-width:100%;   /* <-- THIS is what prevents overflow */
+    height: clamp(220px, 40vh, 700px);
+    object-fit: cover;
+    display:block;
+}
+.page-hero{
+    overflow-x:hidden;   /* <-- ensures the container never forces page to expand */
+}
+
 
         /* Reduce overlay padding on very small screens */
         @media (max-width: 480px){
@@ -249,40 +260,40 @@
 
     /*added this to see if t will fix the mobile issue, everything over flows*/
     /* UNIVERSAL MOBILE FIX — prevents horizontal scroll */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
 
-/* Ensure all grid columns shrink on mobile */
-.column, [class*="col"], [class*="md-"], [class*="xl-"] {
-  max-width: 100%;
-}
+    /* Ensure all grid columns shrink on mobile */
+    .column, [class*="col"], [class*="md-"], [class*="xl-"] {
+    max-width: 100%;
+    }
 
-/* Ensure all images behave responsively */
-img, figure img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+    /* Ensure all images behave responsively */
+    img, figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    }
 
-/* Responsive iframe container */
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
+    /* Responsive iframe container */
+    .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/*end of this fix*/
+    .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+    /*end of this fix*/
 
     </style>
 
