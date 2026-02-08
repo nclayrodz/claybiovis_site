@@ -2192,6 +2192,7 @@ button.btn--stroke {
     font-weight: 700;
     border     : 2px solid var(--color-btn-stroke);
     color      : var(--color-btn-stroke-text);
+    border-radius: 4rem;
 }
 
 .btn--stroke:focus,
