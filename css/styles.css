@@ -2202,6 +2202,7 @@ button.btn--stroke:hover {
     background: var(--color-btn-stroke-hover) !important;
     border    : 2px solid var(--color-btn-stroke-hover);
     color     : var(--color-btn-stroke-hover-text);
+    border-radius: 4rem;
 }
 
 .btn--pill,
